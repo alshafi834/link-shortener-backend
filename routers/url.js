@@ -6,7 +6,6 @@ const shortID = require("shortid");
 const Url = require("../models/Url");
 
 router.post("/shorten", async (req, res) => {
-  console.log(req);
   const { longUrl } = req.body;
   const baseUrl = process.env.baseURL;
 
