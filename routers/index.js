@@ -3,6 +3,12 @@ const router = express.Router();
 
 const Url = require("../models/Url");
 
+router.get("/", (req, res) => {
+  res.json({
+    message: "Hello world",
+  });
+});
+
 router.get("/:code", async (req, res) => {
   try {
     const url = await Url.findOne({ urlCode: req.params.code });
